@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Info">
+
+  <ScrollView >
+
+    <StackLayout Spacing="0" Orientation="Vertical">
+
+      
+
+      <Label Text="Info" FontSize="Large" HorizontalOptions="Center"/>
+
+      <Label FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center">
+        <Label.Text>
+          Esta aplicación permite, mediante métodos criptográficos y de esteganografía, guardar textos dentro de imágenes de forma tal que sólo podrán ser leídos por el usuario al cual va destinado el mensaje.
+        </Label.Text>
+      </Label>
+
+      <Label Text="Autor: Jorge A. Rios Garcia    2016" FontSize="Small" HorizontalOptions="Center"/>
+
+    </StackLayout>
+
+  </ScrollView>
+  
+</ContentPage>

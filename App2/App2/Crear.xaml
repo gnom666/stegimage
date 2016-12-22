@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Crear">
+
+  <ScrollView >
+    <StackLayout>
+
+      <Label Text="Seleccione cuatro valores aleatorios para generar la contraseña interna. Luego presione el botón Crear y copie la contraseña pública al portapapeles." HorizontalOptions="Center"/>
+
+      <Slider VerticalOptions="Center" Minimum="0" Maximum="255" x:Name="sldrV1"/>
+      <Slider VerticalOptions="Center" Minimum="0" Maximum="255" x:Name="sldrV2"/>
+      <Slider VerticalOptions="Center" Minimum="0" Maximum="255" x:Name="sldrV3"/>
+      <Slider VerticalOptions="Center" Minimum="0" Maximum="255" x:Name="sldrV4"/>
+
+      <Grid >
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Contraseña pública" HorizontalOptions="Center"  Grid.Row="0" Grid.Column="0" VerticalOptions="Center" x:Name="lblCP"/>
+        <Button Text="Crear"  Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="btnCrear" />
+      </Grid>
+      
+      
+      
+    </StackLayout>
+  </ScrollView>
+  
+</ContentPage>

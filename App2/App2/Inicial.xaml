@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             x:Class="App2.Inicial">
+
+  <ScrollView >
+
+    <StackLayout Spacing="0" Orientation="Vertical">
+
+      <Grid >
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="icon.png" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" WidthRequest="50" HeightRequest="50">
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnInfoTapped" />
+          </Image.GestureRecognizers>
+        </Image>
+      </Grid>
+
+      <Image Source="icon.png" WidthRequest="200" HeightRequest="200" />
+
+      <Label TextColor="Color.Accent" FontSize = "20" Text="Nombre" />
+
+      <Entry Placeholder="Nombre" />
+
+      <Label TextColor="Color.Accent" FontSize = "20" Text="Contraseña" />
+
+      <Entry Placeholder="Contraseña" IsPassword="True"/>
+
+      <Grid>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Text="Entrar" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" x:Name="btnEntrar" />
+
+        <Button Text="Crear"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" x:Name="btnCrear" />
+
+      </Grid>
+
+    </StackLayout>
+
+  </ScrollView>
+
+</ContentPage>
