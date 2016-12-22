@@ -24,6 +24,18 @@ namespace App2
             
         }
 
+        void OnAddTapped(object sender, EventArgs args)
+        {
+            Image image = (Image)sender;
+            image.Opacity = 0.5;
+            Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
+            {
+                image.Opacity = 1;
+                return false;
+            });
+            Navigation.PushAsync(new Info());
+        }
+
         public interface IClipBoard
         {
             String GetTextFromClipBoard();

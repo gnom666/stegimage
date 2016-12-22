@@ -8,22 +8,12 @@
 
     <StackLayout Spacing="0" Orientation="Vertical">
 
-      <Grid >
-
-        <Grid.RowDefinitions>
-          <RowDefinition Height="100" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*" />
-          <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
-        <Image Source="icon.png" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" WidthRequest="50" HeightRequest="50">
-          <Image.GestureRecognizers>
-            <TapGestureRecognizer Tapped="OnInfoTapped" />
-          </Image.GestureRecognizers>
-        </Image>
-      </Grid>
+      <Image Source="icon.png" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="50" HeightRequest="50">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Tapped="OnInfoTapped" />
+        </Image.GestureRecognizers>
+      </Image>
+      
 
       <Image Source="icon.png" WidthRequest="200" HeightRequest="200" />
 

@@ -6,8 +6,13 @@
     
     <StackLayout>
       
+      <Image Source="icon.png" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="50" HeightRequest="50">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Tapped="OnAddTapped" />
+        </Image.GestureRecognizers>
+      </Image>
       <Label Text="" x:Name="lblTmp" />
-  
+        
        <ListView  x:Name="lstView" RowHeight="60">
 			  <ListView.ItemTemplate>
 				  <DataTemplate>
