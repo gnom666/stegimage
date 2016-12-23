@@ -47,12 +47,34 @@ namespace App2
             lblTmp.Text = text;            
         }
 
+        public void btnEditClicked(object sender, EventArgs e)
+        {
+            Image image = (Image)sender;
+            image.Opacity = 0.5;
+            Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
+            {
+                image.Opacity = 1;
+                return false;
+            });
+        }
+
+        public void btnRemoveClicked(object sender, EventArgs e)
+        {
+            Image image = (Image)sender;
+            image.Opacity = 0.5;
+            Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
+            {
+                image.Opacity = 1;
+                return false;
+            });
+        }
+
         private void FillListView()
         {
             contacts = new ObservableCollection<ContactsViewModel>();
-            contacts.Add(new ContactsViewModel { name = "Tomato", publicKey = "Fruit", image = "icon.png" });
-            contacts.Add(new ContactsViewModel { name = "Romaine Lettuce", publicKey = "Vegetable", image = "icon.png" });
-            contacts.Add(new ContactsViewModel { name = "Zucchini", publicKey = "Vegetable", image = "icon.png" });
+            contacts.Add(new ContactsViewModel { name = "Tomato", publicKey = "Fruit", image = "icon.png", index = 0 });
+            contacts.Add(new ContactsViewModel { name = "Romaine Lettuce", publicKey = "Vegetable", image = "icon.png", index = 1 });
+            contacts.Add(new ContactsViewModel { name = "Zucchini", publicKey = "Vegetable", image = "icon.png", index = 2 });
             lstView.ItemsSource = contacts;
         }
     }
