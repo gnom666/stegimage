@@ -14,12 +14,14 @@ namespace App2
     public partial class Contacts : ContentPage
     {
         public ObservableCollection<ContactsViewModel> contacts { get; set; }
+		public ObservableCollection<ActivityViewModel> activities { get; set; }
 
-        public Contacts()
+		public Contacts()
         {
             InitializeComponent();
 
-            FillListView();
+			//FillListView();
+			FillActivities();
 
             
         }
@@ -77,5 +79,12 @@ namespace App2
             contacts.Add(new ContactsViewModel { name = "Zucchini", publicKey = "Vegetable", image = "icon.png", index = 2 });
             lstView.ItemsSource = contacts;
         }
-    }
+
+		private void FillActivities()
+		{
+			activities = new ObservableCollection<ActivityViewModel>();
+			activities.Add(new ActivityViewModel { id = 1, name="fiesta", date="hoy", owner_id=1, total=610.00});
+			lstView.ItemsSource = activities;
+		}
+	}
 }

@@ -37,7 +37,7 @@ namespace App2
 
         private void BtnContacts_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Contacts());
+            Navigation.PushAsync(new Activity());
         }
     }
 }

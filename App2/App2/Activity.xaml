@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Activity">
+    <ContentPage.Content>
+		<ScrollView>
+        <StackLayout>
+			<Image Source="icon.png" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="50" HeightRequest="50">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Tapped="OnAddTapped" />
+				</Image.GestureRecognizers>
+			</Image>
+
+
+			<ListView  x:Name="lstActView" RowHeight="60">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="White">
+								<Image Source="{Binding image}"/>
+								<StackLayout Orientation="Vertical">
+									<Label Text="{Binding name}" FontSize="24" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 40"/>
+									<Label Text="{Binding date}" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+								</StackLayout>
+
+								<Image Source="icon.png" HorizontalOptions="End" VerticalOptions="Start" WidthRequest="30" HeightRequest="30">
+									<Image.GestureRecognizers>
+										<TapGestureRecognizer Tapped="btnEditActClicked" />
+									</Image.GestureRecognizers>
+								</Image>
+								<Image Source="icon.png" HorizontalOptions="End" VerticalOptions="Start" WidthRequest="30" HeightRequest="30">
+									<Image.GestureRecognizers>
+										<TapGestureRecognizer Tapped="btnRemoveActClicked" />
+									</Image.GestureRecognizers>
+								</Image>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+		</ScrollView>
+    </ContentPage.Content>
+</ContentPage>
